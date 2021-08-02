@@ -12,7 +12,7 @@ function validator(options){
                     inputElement.parentElement.querySelector(".mess-err").innerText=""
                     inputElement.parentElement.classList.remove("color-err")
                 }
-                return !errMess;
+                return errMess;
         }
     }
     var formElement = document.querySelector(options.form);
@@ -21,8 +21,10 @@ function validator(options){
         options.rules.forEach(function(rule){
             var inputElement = formElement.querySelector(rule.selector);
             if(validate(inputElement,rule))
-                isAllow = true;
+                isAllow = false;
+                
         });
+        console.log(isAllow);
         return isAllow;
     }
     
