@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="css/evclb.css" rel="stylesheet" />
+    <title>forms event MPC</title>
+    <link href="img/mpc.png" rel="shortcut icon"/>
+</head>
+<body>
+   <div class="container">
+        <header>
+            <img src="img/mpc.png" width="30"/>
+            <img src="img/cntt.png" width="30"/>
+        </header>
+        <p>* : bắt buộc</p>
+        <form action="" id ="form">
+            <div class="input-wrap">
+                <!--ho ten-->
+                <div class="from-group">
+                    <label for="hoTen"><h3>Họ và tên: *</h3></label>
+                    <input type="text" name = "" id = "hoTen" placeholder="Họ tên của bạn">
+                    <span class="mess-err"></span>
+                </div>
+                <div class="form-group">
+                    <label for="mssv"><h3>MSSV: *</h3></label> 
+                    <input type="text" name = "" id = "mssv" placeholder="Mã số sinh viên của bạn">
+                    <span class="mess-err"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><h3>Email: *</h3></label> 
+                    <input type="text"  name ="" id ="email" placeholder="Email của bạn">
+                    <span class="mess-err"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="khoa"><h3>bạn thuộc khoa nào? *</h3></label>
+                        <select class="option" name="" id = "khoa" >
+                            <option selected="selected">Chọn khoa của bạn</option>
+                            <option>Công Nghệ Thông Tin </option>
+                            <option>Kinh Tế và Quản Lý Công</option>
+                            <option>Tài Chính - Ngân Hàng </option>
+                            <option>Đào tạo Đặc Biệt </option>
+                            <option>Kế Toán Kiểm Toán </option>
+                            <option>Ngoại Ngữ </option>
+                            <option>Xây Dựng </option>
+                            <option>Công Nghệ Sinh Học </option>
+                            <option>Luật </option>
+                            <option>Quản Trị Kinh Doanh </option>
+                            <option>XHH - CTXH - ĐNA </option>
+                        </select>
+                    <span class="mess-err"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for=""><h3>câu hỏi: </h3></label>
+                    <textarea cols="80" rows="10"> </textarea>
+                </div>
+                <!--tra loi cau hoi-->
+                <div class="form-group">
+                    <label for="dapAn"><h3>Đáp Án *</h3></label>
+                    <input type="text" name="" id="dapAn" placeholder="Đáp án của bạn là">
+                    <span class="mess-err"></span>
+                </div>
+            </div>
+
+            <input type="submit" value="Gửi">
+        </form>
+   </div>
+   <script src = "js/handleFrom.js"></script>
+   <script>
+       validator({
+            form:"#form",
+            rules:[
+                validator.isRequired("#hoTen"),
+                validator.isRequired("#dapAn"),
+                validator.isRequired("#mssv"),
+                validator.checkKhoa("#khoa"),
+                validator.isEmailOu("#email")
+            ]
+       })
+   </script>
+</body>
+</html>

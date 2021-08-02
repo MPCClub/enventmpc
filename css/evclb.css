@@ -1,0 +1,64 @@
+
+.container{
+    width: 640px;
+    margin: 0 auto;
+}
+header{
+    width: 640px;
+    height: 160px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+ .input-wrap{
+     width: 620px;
+     background-color: orange;
+     margin-bottom: 15px; 
+     border-radius: 10px;
+     padding-left: 20px;
+ }
+ input[type=text] {
+    width: 600px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    border-bottom:3px solid red;
+  }
+  .option{
+    width: 600px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    border-bottom:3px solid red;
+  }
+ input[type="submit"] {
+    width: 640px;
+    height: 50px;
+    background-color: #45a049;
+    border-radius: 5px;
+    color: white;
+ }
+
+ input[type = "submit"]:hover{
+     font-size:20px;
+ }
+
+ textarea {
+    width: 600px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+    border-bottom:3px solid red;
+ }
+ .color-err{
+     color: red;
+ }
+ label>h3{
+     color: black;
+ }
+ input[id = "dapAn"]{
+     margin-bottom: 30px;
+ }
