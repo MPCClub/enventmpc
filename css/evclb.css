@@ -6,7 +6,8 @@
 header{
     width: 640px;
     height: 160px;
-    background-image: url("../img/logoCLB.svg");
+    
+    content:url("../img/back1.jpg");
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -79,3 +80,20 @@ section>p{
 body{
     background-image: linear-gradient(purple, pink);
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .input-wrap{
+        width: 95%;
+    }
+    section {
+        width: 98%;
+    }
+    header, input[type = "submit"] {
+        width: 98.5%;
+    }
+    body{
+        margin-top:30px;
+    }
+  }
+  
