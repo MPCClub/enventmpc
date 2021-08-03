@@ -47,7 +47,9 @@ header{
  input[type = "submit"]:hover{
      font-size:20px;
  }
-
+ span{
+     display: block;
+ }
  textarea {
     width: 600px;
     margin: 8px 0;
