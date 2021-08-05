@@ -97,11 +97,5 @@ body{
     body{
         margin-top:30px;
     }
-    .container{
-        width: 90%;
-    }
-    input[type="text"],#khoa,textarea{
-        width: 80%;
-    }
   }
   
