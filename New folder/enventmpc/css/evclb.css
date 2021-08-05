@@ -1,0 +1,101 @@
+
+.container{
+    width: 640px;
+    margin: 0 auto;
+}
+header{
+    width: 640px;
+    height: 160px;
+    
+    content:url("../img/back1.jpg");
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+ .input-wrap{
+     border: 2px solid orange;
+     width: 620px;
+     background-color: white;
+     margin-bottom: 15px; 
+     border-radius: 10px;
+     padding-left: 20px;
+ }
+ input[type=text] {
+    width: 600px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    border-bottom:3px solid orange;
+  }
+  .option{
+    width: 600px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    border-bottom:3px solid orange;
+  }
+ input[type="submit"] {
+    width: 640px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+ }
+
+ input[type = "submit"]:hover{
+     font-size:20px;
+ }
+ span{
+     display: block;
+ }
+ textarea {
+    width: 600px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+    border-bottom:3px solid orange;
+ }
+ .color-err{
+     color: red;
+ }
+ label>h3{
+     color: black;
+ }
+.input-wrap div{
+    margin: 25px 0;
+}
+section{
+    background-color: white;
+    border: 2px solid orange;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+section>h1,p{
+    margin-left: 20px;
+    margin-bottom: 12px;
+}
+section>p{
+    color: red;
+}
+body{
+    background-image: linear-gradient(purple, pink);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .input-wrap{
+        width: 95%;
+    }
+    section {
+        width: 98%;
+    }
+    header, input[type = "submit"] {
+        width: 98.5%;
+    }
+    body{
+        margin-top:30px;
+    }
+  }
+  
