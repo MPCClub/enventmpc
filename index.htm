@@ -14,30 +14,42 @@
         </header>
         <section>
             <h1>Tiêu Đề</h1>
-            <p>*: Băt buộc </p>
         </section>
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfxNL9RTrVeduKdfEjIdE6AWwrmDqfLLFhkwqZKW_nFOVgp1A/formResponse" id ="form">
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfxNL9RTrVeduKdfEjIdE6AWwrmDqfLLFhkwqZKW_nFOVgp1A/formResponse" id ="form" >
             <div class="input-wrap">
+                <p>*: Băt buộc </p>
                 <!--ho ten-->
-                <div class="from-group">
-                    <label for="hoTen"><h3>Họ và tên: *</h3></label>
-                    <input type="text" name = "entry.458361263" id = "hoTen" placeholder="Họ tên của bạn">
+                <div class="form-group">
+                    <div class="title-icon">
+                        <img src="./img/id-card.svg" alt="">
+                        <label for="hoTen"><h3>Họ và tên: *</h3></label>
+                    </div>
+                    <input type="text" name = "entry.458361263" id = "hoTen" placeholder="Vd: Nguyễn An">
                     <span class="mess-err"></span>
                 </div>
                 <div class="form-group">
-                    <label for="mssv"><h3>MSSV: *</h3></label> 
-                    <input type="text" name = "entry.1149309363" id = "mssv" placeholder="Mã số sinh viên của bạn">
+                    <div class="title-icon">
+                        <img src="./img/mssv.svg" alt="">
+                        <label for="mssv"><h3>MSSV: *</h3></label> 
+                    </div>
+                    <input type="number" name = "entry.1149309363" id = "mssv" placeholder="Vd: 195101xxxx">
                     <span class="mess-err"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="email"><h3>Email: *</h3></label> 
+                    <div class="title-icon">
+                        <img src="./img/email.svg" alt="">
+                        <label for="email"><h3>Email: *</h3></label>
+                    </div>
                     <input type="text"  name ="entry.1149284549" id ="email" placeholder="Sử dụng email của trường">
                     <span class="mess-err"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="khoa"><h3>bạn thuộc khoa nào? *</h3></label>
+                    <div class="title-icon">
+                        <img src="./img/khoa.svg" alt="">
+                        <label for="khoa"><h3>bạn thuộc khoa nào? *</h3></label>
+                    </div>
                         <select class="option" name="entry.1789974083" id = "khoa" >
                             <option selected="selected">Chọn khoa của bạn</option>
                             <option value="Công Nghệ Thông Tin">Công Nghệ Thông Tin </option>
@@ -55,20 +67,37 @@
                     <span class="mess-err"></span>
                 </div>
                 
-                <div class="form-group">
-                    <label for=""><h3>câu hỏi: </h3></label>
-                    <textarea cols="80" rows="10" name="entry.876882499"> </textarea>
-                </div>
                 <!--tra loi cau hoi-->
                 <div class="form-group">
-                    <label for="dapAn"><h3>Đáp Án *</h3></label>
-                    <input type="text" name="entry.92428185" id="dapAn" placeholder="Đáp án của bạn là">
+                    <div class="title-icon">
+                        <img src="./img/cau1.svg" alt="">
+                        <label for="dapAn1"><h3>Đáp Án *</h3></label>
+                    </div>
+                    <input type="text" name="entry.876882499" id="dapAn1" placeholder="Đáp án của bạn là">
+                    <span class="mess-err"></span>
+                </div>
+                <div class="form-group">
+                    <div class="title-icon">
+                        <img src="./img/cau2.svg" alt="">
+                        <label for="dapAn"><h3>Đáp Án *</h3></label>
+                    </div>
+                    <input type="text" name="entry.92428185" id="dapAn2" placeholder="Đáp án của bạn là">
+                    <span class="mess-err"></span>
+                </div>
+                <div class="form-group">
+                    <div class="title-icon">
+                        <img src="./img/cau3.svg" alt="">
+                        <label for="dapAn"><h3>Đáp Án *</h3></label>
+                    </div>
+                    <input type="text" name="entry.798220633" id="dapAn3" placeholder="Đáp án của bạn là">
                     <span class="mess-err"></span>
                 </div>
             </div>
-
             <input  type="submit" value="Gửi">
         </form>
+        
+    </div>
+
    </div>
    <script src = "js/handleFrom.js"></script>
    <script>
@@ -79,6 +108,9 @@
                 validator.isRequired("#dapAn"),
                 validator.isRequired("#mssv"),
                 validator.checkKhoa("#khoa"),
+                validator.isRequired("#dapAn1"),
+                validator.isRequired("#dapAn2"),
+                validator.isRequired("#dapAn3"),
                 validator.isEmailOu("#email")
             ]
        })

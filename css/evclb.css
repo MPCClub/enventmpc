@@ -20,13 +20,18 @@ header{
      border-radius: 10px;
      padding-left: 20px;
  }
- input[type=text] {
+ input {
     width: 600px;
     padding: 12px 20px;
     box-sizing: border-box;
     border-radius: 5px;
     border: none;
+    outline: none;
     border-bottom:3px solid orange;
+   
+  }
+.box-shadow{
+    box-shadow: 5px 5px 5px orange;
   }
   .option{
     width: 600px;
@@ -60,10 +65,13 @@ header{
  .color-err{
      color: red;
  }
+ select{
+     outline: none;
+ }
  label>h3{
      color: black;
  }
-.input-wrap div{
+.form-group{
     margin: 25px 0;
 }
 section{
@@ -76,11 +84,25 @@ section>h1,p{
     margin-left: 20px;
     margin-bottom: 12px;
 }
-section>p{
+.input-wrap p{
+    margin-left: 0;
     color: red;
 }
 body{
     background-image: linear-gradient(purple, pink);
+}
+.title-icon label,img{
+    display: inline-block;
+}
+.title-icon img{
+    margin-right: 4px;
+    width: 20px;
+}
+.mess-err{
+    display: block;
+    margin-top: 6px;
+    margin-left: 20px;
+    font-size: 12px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -100,11 +122,24 @@ body{
     .container{
         width: 90%;
     }
-    input[type="text"],#khoa,textarea{
+    input,#khoa,textarea{
         width: 80%;
     }
     header{
         height: 70px;
+    }
+    .button-cauHoi{
+        width: 38px;
+        height: 38px;
+        font-size: 10px;
+        margin: 0;
+        left: 88%;
+    }
+    .button-cauHoi h5{
+        margin: 0;
+    }
+    .cauhoi{
+        width: 70%;
     }
   }
   

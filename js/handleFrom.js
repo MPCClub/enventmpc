@@ -15,8 +15,10 @@ function validator(options){
                 return errMess;
         }
     }
+    // xử lý khi trang submit thành công
+    
     var formElement = document.querySelector(options.form);
-    formElement.onsubmit = function(e){
+    formElement.onsubmit = function (e){
         var isAllow = true;
         options.rules.forEach(function(rule){
             var inputElement = formElement.querySelector(rule.selector);
@@ -32,17 +34,20 @@ function validator(options){
         options.rules.forEach(function(rule){
             var inputElement = formElement.querySelector(rule.selector);
             if(inputElement){
-            // xử lý khi blur
+                // xử lý khi blur
                 inputElement.onblur = function(){
                     validate(inputElement,rule);
+                    inputElement.classList.remove("box-shadow");
+                }
+                // sử lý khi người dùng đang nhập
+                inputElement.oninput = function (){
+                    inputElement.classList.add("box-shadow");
+                    inputElement.parentElement.querySelector(".mess-err").innerText = "";
+                    inputElement.parentElement.classList.remove("color-err");
+
                 }
             }
-            // sử lý khi người dùng đang nhập
-            inputElement.oninput = function (){
-                inputElement.parentElement.querySelector(".mess-err").innerText = "";
-                inputElement.parentElement.classList.remove("color-err");
-
-            }
+            
         })
     }
 }
@@ -51,7 +56,7 @@ validator.isRequired = function(selector){
     return{
         selector:selector,
         test: function (value){
-            return value.trim() ? undefined:"Bạn chưa nhâp giá trị";
+            return value.trim() ? undefined:"không được để trống";
         }
     }
 }
@@ -70,6 +75,7 @@ validator.isEmailOu = function(selector){
     }
 
 }
+// kiểm tra đã chọn khoa hay chưa
 validator.checkKhoa= function(selector){
     return{
         selector:selector,
