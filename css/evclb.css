@@ -103,5 +103,8 @@ body{
     input[type="text"],#khoa,textarea{
         width: 80%;
     }
+    header{
+        height: 70px;
+    }
   }
   
