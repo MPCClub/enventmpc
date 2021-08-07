@@ -15,16 +15,15 @@ function validator(options){
                 return errMess;
         }
     }
-    // xử lý khi trang submit thành công
-    
+
     var formElement = document.querySelector(options.form);
+    // cho phép submit khi data hợp lệ
     formElement.onsubmit = function (e){
         var isAllow = true;
         options.rules.forEach(function(rule){
             var inputElement = formElement.querySelector(rule.selector);
             if(validate(inputElement,rule))
                 isAllow = false;
-                
         });
         console.log(isAllow);
         return isAllow;
