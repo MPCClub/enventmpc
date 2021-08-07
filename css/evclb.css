@@ -1,4 +1,6 @@
-
+*{
+    text-decoration: none;
+}
 .container{
     width: 640px;
     margin: 0 auto;
@@ -104,6 +106,9 @@ body{
     margin-left: 20px;
     font-size: 12px;
 }
+.hag-tag{
+    color: blue;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -128,18 +133,8 @@ body{
     header{
         height: 70px;
     }
-    .button-cauHoi{
-        width: 38px;
-        height: 38px;
-        font-size: 10px;
-        margin: 0;
-        left: 88%;
-    }
-    .button-cauHoi h5{
-        margin: 0;
-    }
-    .cauhoi{
-        width: 70%;
+    .noi-dung-event{
+        font-size: 14px;
     }
   }
   
