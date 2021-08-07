@@ -50,6 +50,7 @@ header img{
     border-bottom:3px solid orange;
   }
  input[type="submit"] {
+     margin: 0 auto;
     width: 640px;
     height: 50px;
     background-color: orange;
@@ -132,6 +133,7 @@ body{
     }
     header, input[type = "submit"] {
         width: 98.5%;
+        margin-left: 9px;
     }
     body{
         margin-top:30px;
