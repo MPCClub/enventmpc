@@ -64,13 +64,7 @@ header img{
  span{
      display: block;
  }
- textarea {
-    width: 600px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: none;
-    border-bottom:3px solid orange;
- }
+ 
  .color-err{
      color: red;
  }
@@ -90,7 +84,7 @@ section{
     margin-bottom: 20px;
     border-radius: 10px;
 }
-section>h1,p{
+.noi-dung-event p,h1{
     margin-left: 20px;
     margin-bottom: 12px;
 }
@@ -122,6 +116,10 @@ body{
 .hag-tag{
     color: blue;
 }
+.img-cauhoi{
+    width: 95%;
+    margin-left: 3px;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -150,6 +148,9 @@ body{
     }
     .noi-dung-event{
         font-size: 14px;
+    }
+    .img-cauhoi{
+        margin: 0;
     }
   }
   
