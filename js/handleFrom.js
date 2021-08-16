@@ -84,5 +84,3 @@ validator.checkKhoa= function(selector){
 
     }
 }
-// chuyển hướng trang đến trang khác
-window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSfxNL9RTrVeduKdfEjIdE6AWwrmDqfLLFhkwqZKW_nFOVgp1A/closedform");
